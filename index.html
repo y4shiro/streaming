@@ -6,10 +6,10 @@
   <script src="http://vjs.zencdn.net/5.10.7/video.js"></script>
 </head>
 <body>
-  <video id="rtmp live test" class="video-js vjs-default-skin" controls
-   preload="auto" width="1280" height="720" data-setup='{}'>
+ <video id="rtmp live test" class="video-js vjs-default-skin" autoplay="autoplay" controls="controls"
+    width="1280" height="720" data-setup='{}'>
     <source src="rtmp://y4shiro.net/live/test" type='rtmp/mp4'>
-    <source src="test.m3u8" type='application/x-mpegURL'>
+    <source src="hls/test.m3u8" type='application/x-mpegURL'>
     <p class="vjs-no-js">
       To view this video please enable JavaScript, and consider upgrading to a web browser
       that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
