@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Video.js Test</title>
+  <link href="http://vjs.zencdn.net/5.10.7/video-js.css" rel="stylesheet">
+  <script src="http://vjs.zencdn.net/5.10.7/video.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/3.3.0/videojs-contrib-hls.min.js"></script>
+  <script src="js/videojs-contrib-media-sources.min.js"></script>
+</head>
+<body>
+<video id="test" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="640" height="360" data-setup="{}">
+  <source src="hls/test.m3u8" type="application/x-mpegURL">
+  <script>
+    var player = videojs('test');
+    player.play();
+  </script>
+</video>
+</body>
+</html>
