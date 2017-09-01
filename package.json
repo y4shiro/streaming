@@ -1,0 +1,10 @@
+{
+  "name": "streaming",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "video.js": "^6.2.5",
+    "videojs-contrib-hls": "^5.10.1",
+    "videojs-contrib-media-sources": "^4.5.1"
+  }
+}
