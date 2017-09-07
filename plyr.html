@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>Plyr + hls.js Test</title>
     <script src="node_modules/hls.js/dist/hls.js"></script>
-    <script src="https://cdn.plyr.io/1.8.2/plyr.js"></script>
-    <link rel="stylesheet" href="https://cdn.plyr.io/1.8.2/plyr.css">
+    <script src="node_modules/plyr/dist/plyr.js"></script>
+    <link rel="stylesheet" href="node_modules/plyr/dist/plyr.css">
   </head>
   <body>
     <video id="video"
@@ -23,6 +23,7 @@
         var hls = new Hls(config);
         hls.loadSource('https://video-dev.github.io/streams/x36xhzz/x36xhzz.m3u8');
         hls.attachMedia(video);
+        hls.loadLevel = 0;
         hls.on(Hls.Events.MANIFEST_PARSED,function() {
           console.log('loadlevel:' + hls.loadLevel);
         });
