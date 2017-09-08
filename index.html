@@ -6,10 +6,16 @@
   <script src="https://vjs.zencdn.net/5.10.7/video.js"></script>
   <script src="js/videojs-contrib-hls.min.js"></script>
   <script src="js/videojs-contrib-media-sources.min.js"></script>
+  <script src="dist/js/app.js"></script>
 </head>
 <body>
- <video id="live" class="video-js vjs-default-skin" autoplay="autoplay" controls="controls"
-    width="960" height="540" data-setup='{}'>
+  <video id="live" class="video-js vjs-default-skin"
+    autoplay
+    controls
+    width="960" height="540"
+    data-setup='{
+      "techOrder" : ["html5", "flash", "other supported tech"],
+    }'>
     <source src="rtmp://y4shiro.net/live/test" type='rtmp/mp4'>
     <source src="hls/test.m3u8" type='application/x-mpegURL'>
     <p class="vjs-no-js">
@@ -17,5 +23,9 @@
       that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
     </p>
   </video>
+  <script>
+    var player = videojs('live');
+    player.play();
+  </script>
 </body>
 </html>
