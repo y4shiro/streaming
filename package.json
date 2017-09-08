@@ -12,6 +12,8 @@
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
     "hls.js": "^0.8.1",
+    "plyr": "^2.0.13",
+    "plyr-resolution-selector": "0.0.3",
     "video.js": "^6.2.5",
     "videojs-contrib-hls": "^5.10.1",
     "videojs-contrib-media-sources": "^4.5.1",
