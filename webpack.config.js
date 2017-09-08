@@ -1,16 +1,30 @@
+const path = require('path');
+
 module.exports = {
-  context: __dirname + '/src',
 
   entry: {
-    js: "./js/entry.js"
+    js: "./src/js/entry.js"
   },
 
   output: {
-    path: __dirname + '/dist',
-    filename: "./js/app.js"
+    path: path.join(__dirname, '/dist'),
+    filename: "./js/bundle.js"
   },
 
   module: {
+    rules : [
+      {
+        test: /\.css/,
+        exclude: /node_modules/,
+        loaders: [
+          'style-loader', 
+          {
+            loader: 'css-loader',
+              options: {url: false}
+          }
+        ]
+      },
+    ],
     loaders: [
       {
         test: /\.js$/,
