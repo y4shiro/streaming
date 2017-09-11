@@ -28,10 +28,15 @@
         hls.loadLevel = 0;
         hls.on(Hls.Events.MANIFEST_PARSED,function() {
           console.log('loadlevel:' + hls.loadLevel);
-        });
 
-        var players = plyr.setup(video);
-        players[0].setVolume(0);
+          const options = {
+            // controls: ['play','mute', 'volume'],
+            clickToPlay: false,
+            hideControls: false
+          }
+          var players = plyr.setup(video, options);
+          players[0].setVolume(0);
+        });
       }
     </script>
   </body>
