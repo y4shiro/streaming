@@ -5,15 +5,14 @@
     <title>Plyr + hls.js Test</title>
     <script src="node_modules/hls.js/dist/hls.js"></script>
     <script src="node_modules/plyr/dist/plyr.js"></script>
+    <link rel="stylesheet" href="css/hls.css">
     <link rel="stylesheet" href="node_modules/plyr/dist/plyr.css">
   </head>
   <body>
-    <video id="video"
-           height="360"
-           width="640"
-           controls
-    >
-    </video>
+    <div class="box">
+      <video id="video">
+      </video>
+    </div>
     <script>
       if(Hls.isSupported()) {
         var video = document.getElementById('video');
